@@ -1,3 +1,5 @@
+
+require 'pry'
 class Backer
   attr_accessor :backed_projects, :name, :backers, :project  
   
@@ -8,7 +10,7 @@ class Backer
   end 
   
   def back_project(project)
-    @backed_projects << project 
-   Project.backers.push(self)
+ backed_projects << project 
+project.add_backer(self)
   end 
 end 
